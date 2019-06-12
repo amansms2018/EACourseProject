@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AirLines | Book</title>
+  <meta charset="utf-8">
+
+  <link href="/dict.css" type="text/css" rel="stylesheet" />
+  <script src="/jquery-3.4.1.js"></script>
+  <script src="/dict.js"></script>
+
+  <script src="/jquery.js" type="application/javascript"></script>
+
+
+
+
+
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+  <script type="text/javascript" src="js/cufon-replace.js"></script>
+  <script type="text/javascript" src="js/Cabin_400.font.js"></script>
+  <script type="text/javascript" src="js/tabs.js"></script>
+  <script type="text/javascript" src="js/jquery.jqtransform.js" ></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript" src="js/atooltip.jquery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script src="../../static/js/dict.js"></script>
+  <script src="../../static/js/jquery-3.4.1.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="js/html5.js"></script>
+  <style type="text/css">.main, .tabs ul.nav a, .content, .button1, .box1, .top { behavior:url("../js/PIE.htc")}</style>
+  <![endif]-->
+</head>
+
+<body id="page3">
+
+<div class="main">
+  <!--header -->
+  <header>
+    <div class="wrapper">
+      <h1><a href="/" id="logo">AirLines</a></h1>
+      <span id="slogan">Fast, Frequent &amp; Safe Flights</span>
+      <nav id="top_nav">
+        <ul>
+          <li><a href="/" class="nav1">Home</a></li>
+          <li><a href="#" class="nav2">Sitemap</a></li>
+          <li><a href="/contact" class="nav3">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav>
+      <ul id="menu">
+        <li><a href="/"><span><span> Home </span></span></a></li>
+<!--        <li><a href="/offers"><span><span> Offers</span></span></a></li>-->
+        <li id="menu_active"><a href="/airport"><span><span> Airport</span></span></a></li>
+        <li><a href="/tariff"><span><span> Tariff</span></span></a></li>
+        <li><a href="/Schuedle"><span><span> Schuedule</span></span></a></li>
+        <li><a href="/safety"><span><span>Safety</span></span></a></li>
+        <li class="end"><a href="/report"><span><span>Report</span></span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- / header -->
+  <!--content -->
+  <section id="content">
+    <div class="wrapper pad1">
+      <article class="col1">
+        <div class="box1">
+          <h2 class="top">Hot Offers of the Week</h2>
+          <div class="pad"> <strong>Birmingham</strong><br>
+            <ul class="pad_bot1 list1">
+              <li><span class="right color1">from GBP 143.-</span><a href="book2.html">Zurich</a></li>
+            </ul>
+            <strong>London (LCY)</strong><br>
+            <ul class="pad_bot1 list1">
+              <li><span class="right color1">from GBP 176.-</span><a href="book2.html">Geneva</a></li>
+              <li><span class="right color1">from GBP 109.-</span><a href="book2.html">Zurich</a></li>
+            </ul>
+
+            <strong>Manchester</strong><br>
+            <ul class="pad_bot2 list1">
+              <li><span class="right color1">from GBP 97.-</span><a href="book2.html">Basel</a></li>
+              <li><span class="right color1">from GBP 103.-</span><a href="book2.html">Zurich</a></li>
+            </ul>
+            <strong>Edinburgh</strong><br>
+            <ul class="pad_bot2 list1">
+              <li><span class="right color1">from GBP 165.-</span><a href="book2.html">Zurich</a></li>
+            </ul>
+            <strong>Birmingham</strong><br>
+            <ul class="pad_bot1 list1">
+              <li><span class="right color1">from GBP 143.-</span><a href="book2.html">Zurich</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="col2">
+        <form  action="/airport" method="post">
+          <fieldset>
+            <legend> Updating list of active airports</legend>
+            <span> <strong> airport code :</strong> </span><input id="airportCode" placeholder="enter code" required>
+            <span> <strong> airport Name : </strong> </span> <input id="airportName" placeholder="enter name" required ><br>
+            <span> <strong> Country  :</strong></span> <input id="country" placeholder=" enter country"  required >
+            <span><strong> city  :</strong> </span>  <input id="city" placeholder="enter city" required>
+
+            <br> <br> <br>
+            <div class="wrapper pad_bot1">
+              <span> <button id="add" class="button1" add><strong>add new Airport</strong></button> </span>
+              <span> <button id="update" class="button1" name=" update"><Update>Update</Update></button> </span>
+              <span> <button id="delete" class="button1" delete><strong>Delete</strong></button> </span>
+              <span> <button id="search" class="button1" search><strong>Search</strong></button> </span>
+
+            </div>
+
+          </fieldset>
+
+          <table border="0px" width="50%;">
+            <tbody id="airports"></tbody>
+          </table>
+
+
+        </form>
+      </article>
+    </div>
+  </section >
+  <!--footer -->
+  <footer>
+    <div class="links">
+      Design by <a target="_blank" href="http://www.mum.edu/"> Student from  CS425 course project </a>
+    </div>
+  </footer>
+  <!--footer end-->
+  <script type="text/javascript">Cufon.now();</script>
+</div>
+</body>
+</html>
