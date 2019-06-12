@@ -60,35 +60,33 @@
                         <label for="dAirport">Departure  Airport</label>
                         <select id="dAirport" th:field="*{departureAirport}" >
                             <option value="ADD"> Addis Ababa</option>
-                            <option value="CPH">Copenjhagen</option>
+                            <option value="CPH">Copenhagen</option>
                             <option value="BDJ">Oslo</option>
                         </select>
                     </div>
                 </div>
 
 <!--                -->
-                <div class="row">
-                <div class="col-25">
-                    <div>
-                    <label for="dAirport">Departure  Airport</label>
-                    </div>
-                    <div>
-                        <select th:field="*{departureAirport}">
-                            <option th:each="airport : ${airports}" th:value="${airport}" th:text="${airport}">Airport</option>
-                        </select>
-                        <label th:if="${#fields.hasErrors('airport')}"  th:errors="*{departureAirport}"  th:class="'error'">Error in Departure airport code</label>
-                    </div>
-                </div>
-                </div>
+<!--                <div class="row">-->
+<!--                <div class="col-25">-->
+<!--                    <div>-->
+<!--                    <label for="dAirport">Departure  Airport</label>-->
+<!--                    </div>-->
+<!--                    <div>-->
+<!--                        <select th:field="*{departureAirport}">-->
+<!--                            <option th:each="airport : ${airports}" th:value="${airport}" th:text="${airport}">Airport</option>-->
+<!--                        </select>-->
+<!--                        <label th:if="${#fields.hasErrors('airport')}"  th:errors="*{departureAirport}"  th:class="'error'">Error in Departure airport code</label>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                </div>-->
 
 
 
-                </tr>
+<!--                </tr>-->
 
 
 <!--                -->
-
-
 
                 <div class="row">
                     <div class="col-25">
@@ -96,8 +94,6 @@
                         <input type="date" id="dDate" th:field="*{departureDate}" />
                     </div>
                 </div>
-
-
                 <div class="row">
                     <div class="col-25">
                         <label for="dTime">Departure Time :</label>
@@ -111,7 +107,7 @@
 
                         <select id="aArrivaleAirport" th:field="*{arriavaleAirport}" >
                             <option value="ADD"> Addis Ababa</option>
-                            <option value="CPH">Copenjhagen</option>
+                            <option value="CPH">Copenhagen</option>
                             <option value="BDJ">Oslo</option>
                         </select>
                     </div>
