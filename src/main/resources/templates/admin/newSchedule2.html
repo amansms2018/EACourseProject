@@ -45,7 +45,7 @@
                                 <div >
                                     <labe> To:</labe>
                                     <select th:field="*{arriavaleAirport}" required>
-                                        <option value="">Select  distination  airport</option>
+                                        <option value="">Select distination  airport</option>
                                         <option th:each="airport:${airports}" th:value="${airport.airportCode}" th:text="${airport.airportName}"></option>
                                     </select>
                                 </div>

@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class BookingController {
+
     @GetMapping(value = "/book")
     public  String bookingUrl(){
-        return  "book";
+        return  "book12";
     }
 
 }

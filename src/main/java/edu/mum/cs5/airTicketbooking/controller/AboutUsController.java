@@ -11,15 +11,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AboutUsController {
     @Autowired
 
-    @GetMapping(value = "/c2")
-    public  String displayCommonHomepage(){
-        return "admin/index123";
-    }
+//    @GetMapping(value = "/c2")
+//    public  String displayCommonHomepage(){
+//        return "admin/index123";
+//    }
     @GetMapping(value = "/c")
     public  String displayCustomerHomepage(){
-        return "customer/index101";
+        return "customer/book12";
     }
 
+    @GetMapping(value = "/cbb")
+    public  String displaybook(){
+        return "admin/book";
+    }
     @GetMapping(value = "/")
     public  String displayHomepage(){
         return "admin/index123";
