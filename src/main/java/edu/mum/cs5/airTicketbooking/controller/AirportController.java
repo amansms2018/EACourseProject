@@ -18,13 +18,13 @@ import java.util.List;
 public class AirportController {
     @Autowired
     AirportService airportService;
-    @GetMapping(value="/newairport")
+    @GetMapping(value="/newAirport")
     public String recordAirport(ModelMap model) {
         Airport airport = new Airport();
         model.addAttribute("airport",airport);
         return "admin/addairport";
     }
-    @RequestMapping(value="/save",method=RequestMethod.POST)
+    @PostMapping(value="/saveAirport")
     public String saveRegistration(@Valid Airport airport, BindingResult result, ModelMap model, RedirectAttributes redirectAttributes) {
         airportService.save(airport);
         return "redirect:/airport/list";
@@ -32,8 +32,9 @@ public class AirportController {
     @GetMapping(value = "/airport/list")
     public ModelAndView getAll() {
         List<Airport> airports = airportService.searchAll();
-        return new ModelAndView("admin/airportlist", "airports", airports);
+        return new ModelAndView("admin/airportList", "airports", airports);
     }
+
 
 //    @RequestMapping(value = "/editsave", method = RequestMethod.POST)
 //    public String editsave(@ModelAttribute("airport") Airport ap) {

@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/xhtml">
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{public/layouts/master-page-layout}">
 <head>
-    <title>AirLines | Book</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="../css/reset.css" type="text/css" media="all">
-    <link rel="stylesheet" href="../css/layout.css" type="text/css" media="all">
-    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
-    <link rel="stylesheet" type="text/css" th:href="@{/static/dict.css}"/>
-    <script type="text/javascript" src="../js/jquery-1.5.2.js" ></script>
-    <script type="text/javascript" src="../js/cufon-yui.js"></script>
-    <script type="text/javascript" src="../js/cufon-replace.js"></script>
-    <script type="text/javascript" src="../js/Cabin_400.font.js"></script>
-    <script type="text/javascript" src="../js/tabs.js"></script>
-    <script type="text/javascript" src="../js/jquery.jqtransform.js" ></script>
-    <script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript" src="../js/atooltip.jquery.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
-    <!--[if lt IE 9]>
-    <script type="text/javascript" src="js/html5.js"></script>
-    <style type="text/css">.main, .tabs ul.nav a, .content, .button1, .box1, .top { behavior:url("../js/PIE.htc")}</style>
-    <![endif]-->
+    <title>  please add the title of the page</title>
 
 </head>
 
-<body id="page3">
+
+
+<body >
+
+
 <br> <br>
 <div class="main">
     <!--header -->
@@ -58,7 +48,7 @@
                 <div class="row">
                     <div class="col-25">
                         <label for="dAirport">Departure  Airport</label>
-                        <select id="dAirport" th:field="*{departureAirport}" >
+                        <select id="dAirport" name="departureAirport" th:value="*{departureAirport}" >
                             <option value="ADD"> Addis Ababa</option>
                             <option value="CPH">Copenhagen</option>
                             <option value="BDJ">Oslo</option>
@@ -66,38 +56,16 @@
                     </div>
                 </div>
 
-<!--                -->
-<!--                <div class="row">-->
-<!--                <div class="col-25">-->
-<!--                    <div>-->
-<!--                    <label for="dAirport">Departure  Airport</label>-->
-<!--                    </div>-->
-<!--                    <div>-->
-<!--                        <select th:field="*{departureAirport}">-->
-<!--                            <option th:each="airport : ${airports}" th:value="${airport}" th:text="${airport}">Airport</option>-->
-<!--                        </select>-->
-<!--                        <label th:if="${#fields.hasErrors('airport')}"  th:errors="*{departureAirport}"  th:class="'error'">Error in Departure airport code</label>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                </div>-->
-
-
-
-<!--                </tr>-->
-
-
-<!--                -->
-
                 <div class="row">
                     <div class="col-25">
                         <label for="dDate">Departure Date:</label>
-                        <input type="date" id="dDate" th:field="*{departureDate}" />
+                        <input type="date" name="departureDate" id="dDate" th:value="${schuedule.departureDate}" required/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-25">
                         <label for="dTime">Departure Time :</label>
-                        <input type="time" id="dTime" th:field="*{departureTime}" />
+                        <input type="time" name="departureTime" id="dTime" th:value="${schuedule.departureTime}" required />
                     </div>
                 </div>
 
@@ -105,7 +73,7 @@
                     <div class="col-25">
                         <label for="aArrivaleAirport">Distination Airport</label>
 
-                        <select id="aArrivaleAirport" th:field="*{arriavaleAirport}" >
+                        <select id="aArrivaleAirport" th:value="*{arriavaleAirport}">
                             <option value="ADD"> Addis Ababa</option>
                             <option value="CPH">Copenhagen</option>
                             <option value="BDJ">Oslo</option>
@@ -117,20 +85,15 @@
                 <div class="row">
                     <div class="col-25">
                         <label for="aDate">Arrivale Date:</label>
-
-                        <input type="date" id="aDate" th:field="*{arrivaleaDate}" />
+                        <input type="date" name="arrivaleDate" id="aDate" th:value="${schuedule.arrivaleaDate}"required/>
                     </div>
                 </div>
-
-
                 <div class="row">
                     <div class="col-25">
                         <label for="aTime">Arrivale Time :</label>
-
-                        <input type="time" id="aTime" th:field="*{arrivaleTime}" />
+                        <input  name="arrivaleTime" type="time" id="aTime" th:value="${schuedule.arrivaleTime}" required/>
                     </div>
                 </div>
-
                 <div class="row">
                     <input type="submit" value="Submit">
                 </div>
@@ -138,6 +101,9 @@
         </div>
     </article>
 </div>
+
+
+
 
 <!--footer -->
 <br>

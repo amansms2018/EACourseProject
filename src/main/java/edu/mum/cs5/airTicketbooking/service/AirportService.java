@@ -9,7 +9,7 @@ import java.util.List;
 
 @Transactional
 @Service
-public  class AirportService {
+public  class AirportService    {
     @Autowired
     AirportRepository airportRepository;
 
