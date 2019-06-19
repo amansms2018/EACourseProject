@@ -51,6 +51,6 @@ public class CrewMemberController {
 	@RequestMapping("/deleteCrew/{id}")
 	public String deleteProduct(@PathVariable(name = "id") int id) {
 	    service.deleteBook(id);
-	  return "home/index";
+		return "redirect:/elibrary-web";
 	}
 }
