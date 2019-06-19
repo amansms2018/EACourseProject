@@ -52,7 +52,6 @@ public class AirportController_aman {
 //    }
     @GetMapping(value = "/deleteairport/{id}")
     public String delete(@PathVariable("id") long id) {
-//        Airport airport = airportService.findOne(id);
         airportService.delete(id);
         return  "redirect:/airport/list";
     }

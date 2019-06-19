@@ -54,39 +54,46 @@ public class AirplaneController {
     }
 
     @RequestMapping(value = "/edit{id}")
-    public String edit(@PathVariable Integer id, Model model) {
-
-//        Airport airport = airportService.findOne(id);
-//        model.addAttribute("airport", airport);
-//        return "admin/updateAirport-form";
-
+    public String edit(@ RequestParam("id") Integer id, Model model) {
         Airplane airplane = airplaneService.getAirplane(id);
         model.addAttribute(   "airplane",airplane);
         return  "home/updateForm";
     }
 
-    //adding a method that edits a list
-    @GetMapping(value = "/update{id}")
-    public String showFormForUpdate(@PathVariable(value = "id") Integer id, @Valid Airplane airplane, BindingResult result, Model model) {
-        if(result.hasErrors()) {
-            airplane.setId(id);
-            return "updateForm";
-        }
-        //get the airplane form the service
-        airplaneService.saveAirplane(airplane);
-
-        model.addAttribute("airplane", airplaneService.getAirplane(id));
-
-        return "home/updateForm";
-    }
+//    //adding a method that edits a list
+//    @GetMapping(value = "/update{id}")
+//    public String showFormForUpdate(@PathVariable(value = "id") Integer id, @Valid Airplane airplane, BindingResult result, Model model) {
+//        if(result.hasErrors()) {
+//            airplane.setId(id);
+//            return "updateForm";
+//        }
+//        //get the airplane form the service
+//        airplaneService.saveAirplane(airplane);
+//
+//        model.addAttribute("airplane", airplaneService.getAirplane(id));
+//
+//        return "home/updateForm";
+//    }
 
 
     //deleteing airplane from the list
-    @GetMapping(value ="/delete")
-    public String deleteAirplane(@RequestParam("id") Integer theId) {
-        //Airplane plane = airplaneService.getAirplane(theId);
-        airplaneService.deletAirplane(theId);
-        return "redirect:/airplanes/list";
+    @GetMapping(value ="delete/{id}")
+    public String deleteAirplane(@PathVariable Integer id) {
+        System.out.println("hi");
+        airplaneService.deletAirplane(id);
+        System.out.println(" after delete");
+        return "redirect:/list";
 
     }
+
+
+//    @RequestMapping(value="/deleteschuedule/{id}",method=RequestMethod.GET)
+//    public String delete(@PathVariable Long id) {
+//        schueduleService.deleteSchueduleById(id);
+//        return "redirect:/admin/schueduleList";
+//    }
+//
 }
+
+
+
