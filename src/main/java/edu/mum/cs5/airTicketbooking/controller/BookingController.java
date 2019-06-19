@@ -8,7 +8,7 @@ public class BookingController {
 
     @GetMapping(value = "/book")
     public  String bookingUrl(){
-        return  "book12";
+        return  "customer/book12";
     }
 
 }

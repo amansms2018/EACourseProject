@@ -32,13 +32,10 @@ public class AboutUsController {
 //    public  String myDatinfo(){
 //        return "admin/myDate";
 //    }
-
-
 //    @PostMapping(value = "/addnewdate")
 //    public  String addmyDatinfo(){
 //
 //        return "admin/MyDate";
 //    }
-
 
 }

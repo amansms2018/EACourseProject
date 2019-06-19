@@ -9,46 +9,46 @@
 </head>
 <body>
 <th:block layout:fragment="content">
-                    <div class="content">
-                        <div class="tab-content" id="Flight">
+    <div class="content">
+        <div class="tab-content" id="Flight">
 
-                            <form action="#" th:action="@{/save}" th:object="${airport}" method="post">
-                                <table>
-                                    <tr>
-                                        <td colspan="2">Airport Code :</td>
+            <form action="#" th:action="@{/save}" th:object="${airport}" method="post">
+                <table>
+                    <tr>
+                        <td colspan="2">Airport Code :</td>
 
-                                        <td width="90%" align="left">
-                                            <input type="text" th:field="*{airportCode}" />
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">Airport Name: 	</td>
+                        <td width="90%" align="left">
+                            <input type="text" th:field="*{airportCode}" />
+                    </tr>
+                    <tr>
+                        <td colspan="2">Airport Name: 	</td>
 
-                                        <td><input type="text" th:field="*{airportName}" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"> Coutry: 	</td>
+                        <td><input type="text" th:field="*{airportName}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> Coutry: 	</td>
 
-                                        <td><input type="text" th:field="*{country}" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2"> City :	</td>
-                                        <td>     <input type="text" th:field="*{city}" />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>	</td>
-                                        <td  colspan="2">
-                                            <input class="button1" type="submit" value="Save"/>
-                                        </td>
-                                    </tr>
+                        <td><input type="text" th:field="*{country}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"> City :	</td>
+                        <td>     <input type="text" th:field="*{city}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>	</td>
+                        <td  colspan="2">
+                            <input class="button1" type="submit" value="Save"/>
+                        </td>
+                    </tr>
 
-                                </table>
-                            </form>
+                </table>
+            </form>
 
-                        </div>
-                    </div>
+        </div>
+    </div>
 
 </th:block>
 <br/>

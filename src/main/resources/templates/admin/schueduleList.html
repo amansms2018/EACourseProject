@@ -15,13 +15,14 @@
                         <h3>List of  Planned Flight Schuedules </h3>
                         <hr/>
                         <a href="/newSchuedule"><h5> new schuedule </h5></a>
-                        <form action="#" th:action="@{/s}" th:object="${schuedule}" method="GET">
+                        <form action="/admin/schueduleList" th:object="${schuedules}" method="GET">
                             <table border="3" width="90%" cellpadding="2">
                                 <tr>
                                     <th> Id</th><th>Departure Airport</th><th> Departure Date </th>
-                                    <th>Departure Time</th>
+<!--                                    <th>Departure Time</th>-->
                                     <th>Arrivale Airport</th><th> Arrivale Date </th>
-                                    <th>Arrivale Time</th>
+<!--                                    <th>Arrivale Time</th>-->
+                                    <th> Airplane Number </th>
                                     <th>Price(USD)</th>
                                     <th>Edit</th><th>Delete</th></tr>
                                 <tr th:each="schuedule:${schuedules}">
@@ -32,7 +33,9 @@
 
                                     <td th:text="${schuedule.getArriavaleAirport()}"></td>
                                     <td th:text="${schuedule.getArrivaleaDate()}"></td>
-                                    <!--                    <td th:text="${schuedule.getDepartureTime()}"></td>-->
+
+                                    <td th:text="${schuedule.getPlaneNumber()}"></td>
+
                                     <td th:text="${schuedule.getPrice()}"></td>
 
                                     <td><a th:href="@{'/editschuedule/' + ${schuedule.getId()}}">Edit</a></td>
