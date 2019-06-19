@@ -5,6 +5,7 @@ import edu.mum.cs5.airTicketbooking.service.AirportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @Controller
 @ComponentScan
-public class AirportController {
+public class AirportController_aman {
     @Autowired
     AirportService airportService;
     @GetMapping(value="/newAirport")
@@ -49,20 +50,20 @@ public class AirportController {
 //    public String displayHomapage() {
 //        return "index";
 //    }
-    @RequestMapping(value = "/deleteairport/{id}", method = RequestMethod.GET)
-    public String delete(@PathVariable String code) {
-        Airport airport = airportService.findOne(code);
-        airportService.delete(airport);
-        return  "redirect:/book/list";
+    @GetMapping(value = "/deleteairport/{id}")
+    public String delete(@PathVariable("id") long id) {
+//        Airport airport = airportService.findOne(id);
+        airportService.delete(id);
+        return  "redirect:/airport/list";
     }
-//
-//    @RequestMapping(value = "/editairport/{id}")
-//    public String edit(@PathVariable String code, ModelMap model) {
-//
-//        Airport airport = airportService.findOne(code);
-//        model.addAttribute("airport", airport);
-//        return "editairport";
-//    }
+
+    @RequestMapping(value = "/editairport/{id}")
+    public String edit(@PathVariable Long id, Model model) {
+
+        Airport airport = airportService.findOne(id);
+        model.addAttribute("airport", airport);
+        return "admin/updateAirport-form";
+    }
 
 
 

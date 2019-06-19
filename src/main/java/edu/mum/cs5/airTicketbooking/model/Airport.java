@@ -29,7 +29,7 @@ public class Airport {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private  long id;
-    @Column(name = "airport_code",unique=true,columnDefinition="VARCHAR(10)")
+//    @Column(name = "airport_code",unique=true,columnDefinition="VARCHAR(10)")
     private String airportCode;
 
     public String getAirportCode() {

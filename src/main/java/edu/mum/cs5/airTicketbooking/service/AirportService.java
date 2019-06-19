@@ -20,13 +20,14 @@ public  class AirportService    {
         return airportRepository.findAll();
     }
 
-    public Airport findOne(String code) {
-        return airportRepository.getOne(code);
+    public Airport findOne(Long id) {
+        return airportRepository.getOne(id);
     }
 
     public long count() {
         return  airportRepository.count() ;
     }
-    public void delete(Airport airport) {
+    public void delete(long id) {
+        airportRepository.deleteById(id);
     }
 }
