@@ -16,7 +16,11 @@
                         <hr/>
                         <a href="/newSchuedule"><h5> new schuedule </h5></a>
                         <form action="/admin/schueduleList" th:object="${schuedules}" method="GET">
-                            <table border="3" width="90%" cellpadding="2">
+
+                            <table class ="table table-bordered table-striped" >
+                                <thead class = "thead-dark">
+
+
                                 <tr>
                                     <th> Id</th><th>Departure Airport</th><th> Departure Date </th>
 <!--                                    <th>Departure Time</th>-->
@@ -25,6 +29,9 @@
                                     <th> Airplane Number </th>
                                     <th>Price(USD)</th>
                                     <th>Edit</th><th>Delete</th></tr>
+
+
+
                                 <tr th:each="schuedule:${schuedules}">
 
                                     <td th:text="${schuedule.getId()}"></td>

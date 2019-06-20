@@ -25,7 +25,7 @@ public class ReservationController {
     @Autowired
     SchueduleService schueduleService;
 
-    @GetMapping(value = "/searchForm")
+    @GetMapping(value = "/searchFlight")
     public String flightForm(Model model) {
         model.addAttribute("schuedule", new Schuedule());
         List<Airport> airports = airportService.searchAll();
