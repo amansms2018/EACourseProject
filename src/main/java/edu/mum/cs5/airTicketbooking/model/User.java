@@ -13,7 +13,7 @@ public class User {
  private int id;
 
  //private double ssn;
- private double ssn3;
+// private double ssn3;
  
  @Column(name = "email")
  private String email;
