@@ -15,8 +15,7 @@ public class Airplane {
 	private String model;
 	private String make;
 	private Integer capacity;
-	//private List<CrewMember> crewMember = new ArrayList<>();
-	
+
 	//constructors
 	public Airplane() {
 		
@@ -66,7 +65,5 @@ public class Airplane {
 		return "Airplane [id=" + id + ", planeNumber=" + planeNumber + ", model=" + model + ", make=" + make
 				+ ", capacity=" + capacity + "]";
 	}
-	
-
 	
 }
