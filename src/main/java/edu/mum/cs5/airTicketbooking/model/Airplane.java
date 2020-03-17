@@ -1,7 +1,5 @@
 package edu.mum.cs5.airTicketbooking.model;
-
 import javax.persistence.*;
-
 @Entity
 @Table(name = "Airplanes")
 public class Airplane {
@@ -58,8 +56,6 @@ public class Airplane {
 	public void setCapacity(Integer capacity) {
 		this.capacity = capacity;
 	}
-	
-	//to string method
 	@Override
 	public String toString() {
 		return "Airplane [id=" + id + ", planeNumber=" + planeNumber + ", model=" + model + ", make=" + make
