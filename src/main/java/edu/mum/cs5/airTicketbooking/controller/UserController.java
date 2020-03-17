@@ -52,10 +52,8 @@ public class UserController {
    model.addObject("user", new User());
    model.setViewName("user/signup");
   }
-  
   return model;
  }
- 
  @RequestMapping(value= {"/home/home"}, method= RequestMethod.GET)
  public ModelAndView home() {
   ModelAndView model = new ModelAndView();
@@ -73,6 +71,5 @@ public class UserController {
   model.setViewName("errors/access_denied");
   return model;
  }
- 
 
 }
